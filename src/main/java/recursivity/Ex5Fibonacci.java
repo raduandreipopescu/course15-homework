@@ -5,14 +5,14 @@ import java.util.Map;
 
 public class Ex5Fibonacci {
 
+    static Map<Long, Long> calculatedFibonacciElements = new HashMap<>();
+
     public static void main(String[] args) {
 
         long targetElement = 25;
         System.out.println("(Standard) Element number " + targetElement + " in Fibonacci's array is: " + getElementInFibonacciStandard(targetElement - 1));
         System.out.println("(Optimized) Element number " + targetElement + " in Fibonacci's array is: " + getElementInFibonacciOptimized(targetElement - 1));
     }
-
-    static Map<Long, Long> calculatedFibonacciElements = new HashMap<>();
 
     private static long getElementInFibonacciOptimized(long targetElement) {
         if (targetElement <= 1) {
